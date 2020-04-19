@@ -1,2 +1,134 @@
+body, html {
+    height: 100%;
+    background: rgb(248,194,235);
+    background: linear-gradient(0deg, rgba(248,194,235,1) 0%, rgba(162,141,209,1) 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/*  Put your CSS Here */
+button {
+    width: 100px;
+    background-color: #57B846;
+    font-family:'Poppins';
+    padding: 7px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 100px;
+    margin-top: 10px;
+
+}
+h1 {
+    position: relative;
+    padding-right: 80px;
+    color: #FFFFFF;
+    font-size: xx-large;
+    margin-right: 40px;
+    margin-top: -10px;
+}
+
+.practice-form {
+    background-color: black;
+    position: relative;
+    top: 100px;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    height: 450px;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.form-row {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    width:55%;
+}
+
+
+.form-row input[type='text'] {
+    font-family: 'Poppins';
+    color: #fff;
+    background-color: black;
+    border-bottom: .5px solid gray;
+    width: 100%;
+    padding-bottom:5px;
+    font-size: 14px;
+    width: 70%;
+    height: initial;
+}
+
+.form-row ::placeholder {
+    font-family: 'Poppins';
+    color: #fff;
+    position: absolute;
+    text-align: left;
+    width: 120px;
+    margin-top: 7px;
+}
+.image {
+    padding-right: 50px;
+    max-width: 400px;
+}  
+
+@media only screen and (min-width:961px) and (max-width: 1100px) {
+    h1 {
+        font-size: xx-large;
+      overflow: wrap;
+      max-width: 200px;
+      margin-top: 5px;
+    padding-right: 80px;
+    }
+    h1, .form-row {
+        padding-right: 40px;
+    }
+    .form-row {
+        width:60%;
+        padding-right: 80px;
+        margin-top: 5px;
+    }
+    /* .splash {
+        max-width: 400px;
+        overflow: hidden;
+        left: 60px;
+    } */
+    .image {
+        padding-right: 50px;
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .image {
+        visibility: hidden;
+    }
+    h1 {
+        white-space: nowrap;
+        right:70px;
+        margin-top: -40px;
+        justify-content: center;
+        padding-right: 200px;
+    }
+    .form-row{
+        position: relative;
+        z-index: 1;
+        width:100%;
+        top: 30px;
+        left:-110px;
+        margin-top:0;
+        margin-right: 90px;
+        padding-left: 40px;
+    }
+    button {
+        position: absolute;
+        bottom: 30px;
+    }
+}
