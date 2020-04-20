@@ -8,7 +8,7 @@ body, html {
     padding: 0;
     box-sizing: border-box;
 }
-
+@media only screen and (min-width: 767px) and (max-width: 1300px){
 button {
     width: 100px;
     background-color: #57B846;
@@ -21,15 +21,13 @@ button {
 
 }
 h1 {
-    position: relative;
-    padding-right: 80px;
+    word-wrap: break-word;
     color: #FFFFFF;
     font-size: xx-large;
-    margin-right: 40px;
-    margin-top: -10px;
 }
 
 .practice-form {
+    overflow-wrap: break-word;
     background-color: black;
     position: relative;
     top: 100px;
@@ -46,15 +44,18 @@ h1 {
     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 }
-.form-row {
+.form-row, .selectWrapper {
     margin-top: 10px;
     margin-bottom: 20px;
     position: relative;
     width:55%;
+    padding-right: 10px;
 }
 
-
-.form-row input[type='text'] {
+.form-row input[type='text'],
+.form-row input[type='date'],
+.form-row input[type='phone']
+ {
     font-family: 'Poppins';
     color: #fff;
     background-color: black;
@@ -64,6 +65,37 @@ h1 {
     font-size: 14px;
     width: 70%;
     height: initial;
+}
+
+select {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-family: 'Poppins';
+    margin-bottom: 5px;
+}
+
+.selectWrapper {
+    position: relative;
+    color: white;
+    border-bottom: .1px solid grey;
+    width: 37.5%;
+    margin-bottom:10px;
+} 
+.selectWrapper:after {
+    content: '>';
+    color: white;
+    font: 17px "Consolas", monospace;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: absolute;
+    pointer-events: none;
+    right: 10px;
 }
 
 .form-row ::placeholder {
@@ -78,7 +110,7 @@ h1 {
     padding-right: 50px;
     max-width: 400px;
 }  
-
+/* 
 @media only screen and (min-width:961px) and (max-width: 1100px) {
     h1 {
         font-size: xx-large;
@@ -95,40 +127,97 @@ h1 {
         padding-right: 80px;
         margin-top: 5px;
     }
-    /* .splash {
+   .splash {
         max-width: 400px;
         overflow: hidden;
         left: 60px;
-    } */
+    }
     .image {
         padding-right: 50px;
         max-width: 400px;
     }
+} */
 }
 
-@media only screen and (max-width: 960px) {
-    .image {
-        visibility: hidden;
+@media only screen and (min-width: 00px) and (max-width: 766px) {
+    .practice-form {
+        overflow-wrap: break-word;
+        position: relative;
+        background-color: black;
+        margin: auto;
+        display: flex;
+        flex-flow: column wrap;
+        width: 50%;
+        height: 95%;
+        top: 30px;
+        justify-content: center;
+        align-content: left;
+        overflow: hidden;
+        border-radius: 10px;
     }
     h1 {
         white-space: nowrap;
-        right:70px;
-        margin-top: -40px;
-        justify-content: center;
-        padding-right: 200px;
+        padding: 10px 0px 10px 0px;
+        margin-top: 20px;
+        font-size: x-large;
+        color: white;
     }
-    .form-row{
+    .splash {
+        width: 100%;
+        object-fit: cover;
+    }
+    .image {
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        display: flex;
+        top: 0px;
+    }
+    .form-row input[type='text'],
+    .form-row input[type='date'],
+    .form-row input[type='phone']
+     {
+        font-family: 'Poppins';
+        color: white;
+        background-color: black;
+        border-bottom: .5px solid gray;
+        font-size: 14px;
+        height: initial;
+    }
+    select[type='xp'] {
+        font-family: 'Poppins';
+        color: gray;
+        background-color: black;
+        font-size: 14px;
+        height: initial;
+        margin-left: -7px;
+    }
+    .form-row, .selectWrapper, h1 {
         position: relative;
-        z-index: 1;
-        width:100%;
-        top: 30px;
-        left:-110px;
-        margin-top:0;
-        margin-right: 90px;
-        padding-left: 40px;
+        top: 140px;
+        display: flex;
+        flex-flow: column wrap;
+        margin: 1px 40px 0px 20px;
+    }
+    .form-row, .selectWrapper {
+        margin-bottom: 20px;
+    }
+    .selectWrapper {
+        border-bottom: .5px solid grey;;
+    }
+    #date {
+        color: grey;
     }
     button {
-        position: absolute;
-        bottom: 30px;
+        left: 20px;
+        top: 140px;
+        position: relative;
+        width: 100px;
+        background-color: #57B846;
+        font-family:'Poppins';
+        padding: 7px;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 100px;
     }
 }
