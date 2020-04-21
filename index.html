@@ -28,18 +28,17 @@
             <img class="splash" src="./images/bg-heading-03.jpg" alt="" width="360px">
         </div>
         <h1>Registration Info</h1>
-          <form action='' method='get' class='speaker-form'>
-        </form>
+    <form action='' method='get' class='speaker-form'>
         <div class='form-row'>
             <label for='full-name'></label>
-            <input id='full-name' name='full-name' type='text'placeholder='Name'/>
+            <input id='full-name' name='full-name' required type='text'placeholder='Name'/>
         </div>
         <div class='form-row'>
             <label for='date'></label>
-            <input id='date' name='date' type='date'placeholder='mm/dd/yyyy'/>
+            <input id='date' name='date' required type='date'placeholder='mm/dd/yyyy'/>
           </div>
         <div class='selectWrapper'>
-            <select type='xp'>
+            <select required type='xp'>
                 <option value="0">Experience</option>
                 <option value="1">Beginner</option>
                 <option value="2">Intermediate</option>
@@ -48,16 +47,16 @@
         </div>
         <div class='form-row'>
             <label for='email'></label>
-            <input id='email' name='email' type='text'placeholder='Email' />
+            <input id='email' name='email' required type='text'placeholder='Email' />
           </div>
         <div class='form-row'>
             <label for='phone'></label>
-            <input id='phone' name='phone' type='phone'placeholder='Phone (Optional)'/>
+            <input id='phone' name='phone' required type='phone'placeholder='Phone (Optional)'/>
         </div>
         <div class= "green-button">
             <button class="button">Submit</button>
         </div>
-    <!-- Your html here -->
+    </form>
 </body>
 
 </html>
